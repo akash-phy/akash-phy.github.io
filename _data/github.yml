@@ -1,0 +1,47 @@
+# GitHub metadata for static repository/user cards (no external image services)
+# Fetched from the GitHub API on 2026-08-02; update manually as needed.
+
+users:
+  akashjnvlko:
+    name: Akash Yadav
+    bio: PhD student @ IISER TVM
+    avatar: https://github.com/akashjnvlko.png
+    url: https://github.com/akashjnvlko
+    public_repos: 5
+    followers: 1
+
+repos:
+  "akashjnvlko/akash.github.io":
+    description: Personal academic website
+    language:
+    stars: 0
+    forks: 0
+    url: https://github.com/akashjnvlko/akash.github.io
+
+  "akashjnvlko/brightness-controller":
+    description:
+    language: Python
+    stars: 1
+    forks: 0
+    url: https://github.com/akashjnvlko/brightness-controller
+
+  "akashjnvlko/unified-computing-interface":
+    description: A pararameter scanning utility.
+    language: Python
+    stars: 1
+    forks: 0
+    url: https://github.com/akashjnvlko/unified-computing-interface
+
+  "akashjnvlko/simulations-statistical-mechanics":
+    description: Summer Project (3rd year with Dr. Anurag Sahay)
+    language: Python
+    stars: 0
+    forks: 0
+    url: https://github.com/akashjnvlko/simulations-statistical-mechanics
+
+  "akashjnvlko/modeling_sim_lab":
+    description:
+    language: Python
+    stars: 1
+    forks: 0
+    url: https://github.com/akashjnvlko/modeling_sim_lab

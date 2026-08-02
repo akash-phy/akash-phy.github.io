@@ -1,0 +1,11 @@
+PRE:
+  url: https://journals.aps.org/pre
+  color: "#00629B"
+
+CSF:
+  url: https://www.sciencedirect.com/journal/chaos-solitons-and-fractals
+  color: "#B03A2E"
+
+arXiv:
+  url: https://arxiv.org
+  color: "#B31B1B"

@@ -1,0 +1,11 @@
+github_users:
+  - akashjnvlko
+
+repo_description_lines_max: 2
+
+github_repos:
+  - akashjnvlko/akash.github.io
+  - akashjnvlko/brightness-controller
+  - akashjnvlko/unified-computing-interface
+  - akashjnvlko/simulations-statistical-mechanics
+  - akashjnvlko/modeling_sim_lab

@@ -1,0 +1,309 @@
+{
+  "basics": {
+    "name": "Akash Yadav",
+    "label": "PhD Research Scholar",
+    "image": "",
+    "email": "akashjnvlko@gmail.com",
+    "phone": "+91-8840081246",
+    "summary": "PhD researcher in Physics, specialising in Complex Systems, Network Science, and Nonlinear Dynamics. Develops analytical and computational modeling approaches to uncover hidden patterns and emergent behaviors in adaptive networks.",
+    "location": {
+      "address": "IISER Thiruvananthapuram",
+      "postalCode": "695551",
+      "city": "Thiruvananthapuram",
+      "countryCode": "IN",
+      "region": "Kerala"
+    },
+    "profiles": [
+      {
+        "network": "Google Scholar",
+        "username": "5Mo5MeMAAAAJ",
+        "url": "https://scholar.google.com/citations?user=5Mo5MeMAAAAJ"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "akashphys",
+        "url": "https://www.linkedin.com/in/akashphys"
+      },
+      {
+        "network": "GitHub",
+        "username": "akashjnvlko",
+        "url": "https://github.com/akashjnvlko"
+      },
+      {
+        "network": "ORCID",
+        "username": "0000-0002-6166-3655",
+        "url": "https://orcid.org/0000-0002-6166-3655"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "IISER Thiruvananthapuram",
+      "position": "Teaching Assistant (Classical Mechanics)",
+      "location": "Thiruvananthapuram, Kerala, India",
+      "startDate": "2025-08-01",
+      "endDate": "2025-12-31",
+      "summary": "",
+      "highlights": [
+        "Teaching",
+        "Classical Mechanics"
+      ]
+    },
+    {
+      "name": "IISER Thiruvananthapuram",
+      "position": "Teaching Assistant (Computational Techniques & Programming Languages)",
+      "location": "Thiruvananthapuram, Kerala, India",
+      "startDate": "2025-01-01",
+      "endDate": "2025-05-31",
+      "summary": "",
+      "highlights": [
+        "Teaching",
+        "Computational Physics"
+      ]
+    },
+    {
+      "name": "IISER Thiruvananthapuram",
+      "position": "Teaching Assistant (Classical Mechanics)",
+      "location": "Thiruvananthapuram, Kerala, India",
+      "startDate": "2024-08-01",
+      "endDate": "2024-12-31",
+      "summary": "",
+      "highlights": [
+        "Teaching",
+        "Classical Mechanics"
+      ]
+    },
+    {
+      "name": "IISER Thiruvananthapuram",
+      "position": "Teaching Assistant (Numerical Methods)",
+      "location": "Thiruvananthapuram, Kerala, India",
+      "startDate": "2024-01-01",
+      "endDate": "2024-05-31",
+      "summary": "",
+      "highlights": [
+        "Teaching",
+        "Numerical Analysis"
+      ]
+    },
+    {
+      "name": "IISER Thiruvananthapuram",
+      "position": "Teaching Assistant (Optics)",
+      "location": "Thiruvananthapuram, Kerala, India",
+      "startDate": "2023-08-01",
+      "endDate": "2023-12-31",
+      "summary": "",
+      "highlights": [
+        "Teaching"
+      ]
+    },
+    {
+      "name": "IISER Thiruvananthapuram",
+      "position": "Junior Research Fellow",
+      "location": "Thiruvananthapuram, Kerala, India",
+      "startDate": "2022-07-01",
+      "endDate": "2023-01-31",
+      "summary": "Research in nonlinear dynamics / swarmalator dynamics; numerical modelling and simulations in Python",
+      "highlights": []
+    },
+    {
+      "name": "Physical Research Laboratory (PRL), Dept. of Space, Govt. of India",
+      "position": "Research Intern",
+      "location": "Ahmedabad, Gujarat, India",
+      "startDate": "2022-01-01",
+      "endDate": "2022-06-30",
+      "summary": "FSTP-2022: modelled satellite surface charging due to plasma interactions; developed charge-estimation proof-of-concept; explored mitigation strategies",
+      "highlights": []
+    },
+    {
+      "name": "Upwork",
+      "position": "Freelance — Modeling & Simulation",
+      "location": "Remote",
+      "startDate": "2021-11-01",
+      "endDate": "",
+      "summary": "Computational modelling projects for physics/engineering; Python simulations and visualisations",
+      "highlights": []
+    },
+    {
+      "name": "Chegg Inc.",
+      "position": "Subject Matter Expert (Physics)",
+      "location": "Remote",
+      "startDate": "2019-03-01",
+      "endDate": "2021-12-31",
+      "summary": "Online tutoring and problem-solving in physics",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "IISER Thiruvananthapuram",
+      "location": "Thiruvananthapuram, Kerala, India",
+      "url": "https://www.iisertvm.ac.in",
+      "area": "Physics (Complex Systems & Nonlinear Dynamics)",
+      "studyType": "PhD",
+      "startDate": "2023-01-01",
+      "endDate": "2028-01-01",
+      "score": "",
+      "courses": [],
+      "highlights": [
+        "Research on adaptive dynamical networks",
+        "Numerical simulations in Python and FORTRAN",
+        "Mathematical analysis of emergent behavior"
+      ]
+    },
+    {
+      "institution": "National Institute of Technology (NIT), Patna",
+      "location": "Patna, Bihar, India",
+      "url": "https://www.nitp.ac.in",
+      "area": "Physics",
+      "studyType": "Integrated M.Sc.",
+      "startDate": "2017-01-01",
+      "endDate": "2022-01-01",
+      "score": "8.73/10",
+      "courses": [],
+      "highlights": []
+    }
+  ],
+  "publications": [
+    {
+      "name": "Exotic swarming dynamics of high-dimensional swarmalators",
+      "publisher": "Physical Review E",
+      "releaseDate": "2024",
+      "summary": ""
+    },
+    {
+      "name": "Disparity-driven heterogeneous nucleation in finite-size adaptive networks",
+      "publisher": "Physical Review E",
+      "releaseDate": "2024",
+      "summary": ""
+    },
+    {
+      "name": "Collective dynamics of pulse-coupled swarmalators",
+      "publisher": "Physical Review E",
+      "releaseDate": "2025",
+      "summary": ""
+    },
+    {
+      "name": "Effect of higher-order interactions on chimera states in two populations of Kuramoto oscillators",
+      "publisher": "Chaos",
+      "releaseDate": "2024",
+      "summary": ""
+    },
+    {
+      "name": "Heterogeneous nucleation in a multiplex adaptive network",
+      "publisher": "Physical Review E",
+      "releaseDate": "2025",
+      "summary": ""
+    },
+    {
+      "name": "Self-organizing states of swarmalator collectives with phase lag",
+      "publisher": "Chaos, Solitons & Fractals",
+      "releaseDate": "2025",
+      "summary": ""
+    },
+    {
+      "name": "Heterogeneous nucleation due to adaptation disparity and phase lag in a finite-size adaptive dynamical network",
+      "publisher": "Physical Review E",
+      "releaseDate": "2025",
+      "summary": ""
+    },
+    {
+      "name": "Collective dynamics of multiplex networks with distinct adaptation rules",
+      "publisher": "Physical Review E",
+      "releaseDate": "2025",
+      "summary": ""
+    },
+    {
+      "name": "Deleterious satellite charging and possible mitigation schemes",
+      "publisher": "arXiv",
+      "releaseDate": "2023",
+      "summary": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "level": "Advanced",
+      "icon": "fa-solid fa-code",
+      "keywords": ["NumPy", "SciPy", "Matplotlib", "NetworkX", "Simulation"]
+    },
+    {
+      "name": "FORTRAN",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-code",
+      "keywords": ["Numerical Computing"]
+    },
+    {
+      "name": "LaTeX",
+      "level": "Advanced",
+      "icon": "fa-solid fa-pen-fancy",
+      "keywords": ["Scientific Writing", "Documentation"]
+    },
+    {
+      "name": "Complex Systems",
+      "level": "Expert",
+      "icon": "fa-solid fa-atom",
+      "keywords": ["Nonlinear Dynamics", "Network Science", "Computational Physics"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Hindi",
+      "fluency": "Native or Bilingual",
+      "icon": ""
+    },
+    {
+      "language": "English",
+      "fluency": "Professional Working",
+      "icon": ""
+    },
+    {
+      "language": "Punjabi",
+      "fluency": "Elementary",
+      "icon": ""
+    }
+  ],
+  "interests": [
+    {
+      "name": "Research",
+      "icon": "fa-solid fa-microscope",
+      "keywords": ["Complex Systems", "Network Science", "Nonlinear Dynamics", "Swarmalators", "Adaptive Networks"]
+    },
+    {
+      "name": "Teaching",
+      "icon": "fa-solid fa-chalkboard-teacher",
+      "keywords": ["Classical Mechanics", "Numerical Methods", "Computational Physics"]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "MATLAB Onramp",
+      "date": "",
+      "issuer": "MATLAB",
+      "icon": "fa-solid fa-certificate"
+    },
+    {
+      "name": "Python Programming (PYTHON101x)",
+      "date": "",
+      "issuer": "",
+      "icon": "fa-solid fa-certificate"
+    },
+    {
+      "name": "LaTeX (LaTeX101x)",
+      "date": "",
+      "issuer": "",
+      "icon": "fa-solid fa-certificate"
+    },
+    {
+      "name": "Embedded System and Robotics",
+      "date": "",
+      "issuer": "",
+      "icon": "fa-solid fa-certificate"
+    },
+    {
+      "name": "Simulink Onramp",
+      "date": "",
+      "issuer": "",
+      "icon": "fa-solid fa-certificate"
+    }
+  ]
+}

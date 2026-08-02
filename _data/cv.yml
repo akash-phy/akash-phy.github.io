@@ -1,0 +1,194 @@
+cv:
+  name: Akash Yadav
+  label: PhD Research Scholar
+  email: akashyadav23@iisertvm.ac.in <br> akashjnvlko@gmail.com
+  location: Thiruvananthapuram, Kerala, India
+  image: ""
+  summary: >
+    PhD researcher in Physics, specialising in Complex Systems, Network Science,
+    and Nonlinear Dynamics. Develops analytical and computational modeling approaches
+    to uncover hidden patterns and emergent behaviors in adaptive networks. Motivated
+    by bridging theory with applications — from brain networks, biological systems,
+    social networks to technological systems.
+
+  social_networks:
+    - network: Google Scholar
+      username: 5Mo5MeMAAAAJ
+    - network: LinkedIn
+      username: akashphys
+    - network: GitHub
+      username: akashjnvlko
+    - network: ORCID
+      username: 0000-0002-6166-3655
+
+  sections:
+    Education:
+      - institution: IISER Thiruvananthapuram
+        location: Thiruvananthapuram, Kerala, India
+        url: https://www.iisertvm.ac.in
+        area: Physics (Complex Systems & Nonlinear Dynamics)
+        studyType: PhD
+        start_date: 2023
+        end_date: 2028
+        score: ""
+        highlights:
+          - Research on adaptive dynamical networks (neuronal/social models)
+          - Numerical simulations in Python and FORTRAN
+          - Mathematical analysis of emergent behavior in complex systems
+
+      - institution: National Institute of Technology (NIT), Patna
+        location: Patna, Bihar, India
+        url: https://www.nitp.ac.in
+        area: Physics
+        studyType: Integrated M.Sc.
+        start_date: 2017
+        end_date: 2022
+        score: 8.73/10
+
+    Experience:
+      - company: IISER Thiruvananthapuram
+        position: Teaching Assistant (Classical Mechanics)
+        location: Thiruvananthapuram, Kerala, India
+        start_date: Aug 2025
+        end_date: Dec 2025
+        # summary: On-site
+        # highlights:
+        #   - Teaching
+        #   - Classical Mechanics
+
+      - company: IISER Thiruvananthapuram
+        position: Teaching Assistant (Computational Techniques & Programming Languages)
+        location: Thiruvananthapuram, Kerala, India
+        start_date: Jan 2025
+        end_date: May 2025
+        # summary: On-site
+        # highlights:
+        #   - Teaching
+        #   - Computational Physics
+
+      - company: IISER Thiruvananthapuram
+        position: Teaching Assistant (Classical Mechanics)
+        location: Thiruvananthapuram, Kerala, India
+        start_date: Aug 2024
+        end_date: Dec 2024
+        # summary: ""
+        # highlights:
+        #   - Teaching
+        #   - Classical Mechanics
+
+      - company: IISER Thiruvananthapuram
+        position: Teaching Assistant (Numerical Methods)
+        location: Thiruvananthapuram, Kerala, India
+        start_date: Jan 2024
+        end_date: May 2024
+        # summary: On-site
+        # highlights:
+        #   - Teaching
+        #   - Numerical Analysis
+
+      - company: IISER Thiruvananthapuram
+        position: Teaching Assistant (Optics)
+        location: Thiruvananthapuram, Kerala, India
+        start_date: Aug 2023
+        end_date: Dec 2023
+        # summary: On-site
+        # highlights:
+        #   - Teaching
+
+      - company: IISER Thiruvananthapuram
+        position: Junior Research Fellow
+        location: Thiruvananthapuram, Kerala, India
+        start_date: Jul 2022
+        end_date: Jan 2023
+        summary: >
+          Research in nonlinear dynamics / swarmalator dynamics;
+          numerical modelling and simulations in Python.
+        highlights:
+          - Swarmalator dynamics
+          - Numerical modelling in Python
+
+      - company: Physical Research Laboratory (PRL), Dept. of Space, Govt. of India
+        position: Research Intern
+        location: Ahmedabad, Gujarat, India
+        start_date: Jan 2022
+        end_date: Jun 2022
+        summary: >
+          Final Semester Project Training (FSTP-2022): modelled satellite
+          surface charging due to plasma interactions; developed
+          charge-estimation proof-of-concept; explored mitigation strategies.
+
+      - company: Upwork
+        position: Freelance — Modeling & Simulation
+        location: Remote
+        start_date: Nov 2021
+        end_date: Present
+        summary: >
+          Computational modelling projects for physics/engineering;
+          Python simulations and visualisations.
+
+      - company: Chegg Inc.
+        position: Subject Matter Expert (Physics)
+        location: Remote
+        start_date: Mar 2019
+        end_date: 2021
+        summary: Online tutoring and problem-solving in physics.
+
+    Skills:
+      - name: Python
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: "NumPy, SciPy, Matplotlib, NetworkX, Simulation"
+      - name: FORTRAN
+        level: Intermediate
+        icon: fa-solid fa-code
+        keywords: "Numerical Computing"
+      - name: LaTeX
+        level: Advanced
+        icon: fa-solid fa-pen-fancy
+        keywords: "Scientific Writing, Documentation"
+      - name: Complex Systems
+        level: Expert
+        icon: fa-solid fa-atom
+        keywords: "Nonlinear Dynamics, Network Science, Computational Physics"
+      - name: Scientific Writing
+        level: Advanced
+        icon: fa-solid fa-book
+        keywords: "Research Papers, Technical Documentation"
+
+    Languages:
+      - name: English
+        summary: "Professional Working"
+      - name: Hindi
+        summary: "Native or Bilingual"
+      - name: Punjabi
+        summary: "Elementary"
+
+    Certificates:
+      - name: Python Programming (PYTHON101x)
+        # date: ""
+        # issuer: ""
+        icon: fa-solid fa-certificate
+      - name: LaTeX (LaTeX101x)
+        # date: ""
+        # issuer: ""
+        icon: fa-solid fa-certificate
+      - name: Embedded System and Robotics
+        # date: ""
+        # issuer: ""
+        icon: fa-solid fa-certificate
+      - name: MATLAB Onramp
+        # date: ""
+        issuer: MATLAB
+        icon: fa-solid fa-certificate
+      - name: Simulink Onramp
+        # date: ""
+        issuer: MATLAB
+        icon: fa-solid fa-certificate
+
+    Interests:
+      - name: Research
+        icon: fa-solid fa-microscope
+        keywords: "Complex Systems, Network Science, Nonlinear Dynamics, Swarmalators, Adaptive Networks"
+      - name: Teaching
+        icon: fa-solid fa-chalkboard-teacher
+        keywords: "Classical Mechanics, Numerical Methods, Computational Physics"

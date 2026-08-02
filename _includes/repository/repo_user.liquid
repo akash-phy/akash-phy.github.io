@@ -1,0 +1,24 @@
+{% assign gh_user = site.data.github.users[include.username] %}
+<div class="repo p-2">
+  <div class="card h-100">
+    <div class="card-body text-center">
+      <img
+        src="{{ gh_user.avatar }}"
+        alt="{{ include.username }}"
+        class="rounded-circle img-fluid mb-2"
+        style="width: 88px; height: 88px; object-fit: cover;"
+        loading="lazy"
+      >
+      <h5 class="card-title mb-0">
+        <a href="{{ gh_user.url }}" target="_blank" rel="noopener">{{ gh_user.name }}</a>
+      </h5>
+      <p class="text-muted mb-1">@{{ include.username }}</p>
+      {% if gh_user.bio %}
+        <p class="card-text text-muted">{{ gh_user.bio }}</p>
+      {% endif %}
+      <p class="text-muted small mb-0">
+        {{ gh_user.public_repos }} repositories &middot; {{ gh_user.followers }} followers
+      </p>
+    </div>
+  </div>
+</div>

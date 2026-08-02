@@ -1,0 +1,61 @@
+/* CV page - prevent timeline/date column from overlapping with experience content */
+.date-column {
+  min-width: 0;
+  width: auto;
+  padding-right: 0.5rem;
+}
+
+.date-column .badge {
+  white-space: normal;
+  word-wrap: break-word;
+  min-width: 0;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  padding: 0.25rem 0.4rem;
+}
+
+.date-column p.location {
+  white-space: normal;
+  font-size: 0.65rem;
+  line-height: 1.2;
+}
+
+.cv .list-group-item .row .col-xs-10,
+.cv .list-group-item .row .col-sm-10,
+.cv .list-group-item .row .col-md-10 {
+  overflow: hidden;
+}
+
+/* White text on blue date badges in CV */
+.cv .card .list-group-item .badge {
+  color: #fff !important;
+}
+
+/* Paper icon before publication titles */
+.paper-icon-col {
+  text-align: center;
+  padding-top: 0.15rem;
+  min-width: 1.5rem;
+  color: var(--global-theme-color);
+}
+
+.abbr-icon-placeholder {
+  text-align: center;
+  padding-top: 0.15rem;
+  color: var(--global-theme-color);
+}
+
+/* Social icons */
+.social .contact-icons {
+  font-size: 2.0rem;
+}
+
+/* Project category + publication year headings - more visible */
+.projects h2.category,
+.publications h2.bibliography {
+  color: var(--global-text-color-light);
+}
+
+.social .contact-icons a {
+  margin: 0 0.5rem;
+}
