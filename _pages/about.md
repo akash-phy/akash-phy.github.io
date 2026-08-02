@@ -31,11 +31,17 @@ latest_posts:
   enabled: false
 ---
 
-I am a **PhD Research Scholar** at the **Indian Institute of Science Education and Research (IISER) Thiruvananthapuram**, working at the intersection of Complex Systems, Network Science, and Nonlinear Dynamics. My research focuses on understanding how simple local interactions give rise to emergent collective behaviors, such as synchronization, self-organization, and pattern formation.
 
-I am particularly fascinated by adaptive dynamical systems, where internal states and structural couplings coevolve in a continuous feedback loop. Unlike static networks, adaptive networks continuously reshape their connection topology based on node states, a mechanism observed in neural plasticity, epidemic contact-rewiring, evolving social ties, and power grid line failures. Similarly, systems of swarmalators exhibit coevolution in physical space, where the internal phase states of mobile oscillators and their spatial configurations mutually influence each other. Such adaptive mechanisms underpin diverse real-world phenomena, ranging from brain dynamics, opinion polarization, biological and robotic swarms.
 
-Leveraging computational modeling and theoretical analysis, I study how state-structure feedback drives emergence, with potential implications for better understanding collective phenomena across neural, biological, social, and technological systems.
+I am a **PhD Research Scholar** at the **School of Physics, Indian Institute of Science Education and Research (IISER) Thiruvananthapuram**, working under the supervision of **Dr. D. V. Senthilkumar**. My research lies at the intersection of Complex Systems, Network Science, and Nonlinear Dynamics.
+
+I study how simple local interactions give rise to emergent collective behaviors such as synchronization, self-organization, and pattern formation. My primary research focuses on adaptive dynamical systems, where the internal states of interacting units and their interaction network coevolve through continuous feedback. Unlike static networks, adaptive networks continuously reorganize their topology in response to node dynamics, a mechanism that underlies diverse phenomena including neural plasticity, adaptive social networks, epidemic contact rewiring, and cascading failures in power grids. I also investigate swarmalator systems, where synchronization and spatial self-organization emerge simultaneously through the coevolution of internal dynamics and motion. Together, these adaptive systems provide a unifying framework for understanding collective behavior across neural, biological, social, and engineered systems.
+
+My research combines mathematical modeling, theoretical analysis, and large-scale numerical simulations to uncover the fundamental principles governing emergence in complex adaptive systems. More broadly, I am interested in statistical physics, computational neuroscience, collective intelligence, dynamical processes on networks, and data-driven approaches to complex systems, with the goal of connecting fundamental nonlinear science to real-world applications.
+
+*As I approach the completion of my PhD, I am interested in collaborative research and postdoctoral opportunities in complex systems, nonlinear dynamics, network science, and related interdisciplinary areas. If my research aligns with your interests, I would be pleased to discuss potential collaborations and future research opportunities.*
+
+
 ## Research Interests
 - Complex Systems
 - Nonlinear Dynamics
