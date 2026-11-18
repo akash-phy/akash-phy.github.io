@@ -2,6 +2,7 @@
 layout: about
 title: About
 permalink: /
+description: Akash Yadav is a PhD Research Scholar at IISER Thiruvananthapuram studying complex systems, adaptive networks, swarmalators, and nonlinear dynamics.
 subtitle: 
 
 
@@ -12,6 +13,7 @@ subtitle:
 profile:
   align: right
   image: akash.png
+  alt: Akash Yadav
   image_circular: false
   more_info: >
     <p>akashyadav23@iisertvm.ac.in</p>

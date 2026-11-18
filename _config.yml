@@ -3,13 +3,14 @@
 # -----------------------------------------------------------------------------
 
 title: Akash Yadav # the website title (if blank, full name will be used instead)
+title_tagline: Complex Systems & Network Science # appended to <title> on the home page (SEO)
 first_name: Akash
 middle_name: ""
 last_name: Yadav
 contact_note: >
   PhD Research Scholar — IISER Thiruvananthapuram
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  PhD Research Scholar at IISER Thiruvananthapuram. Research in Complex Systems, Network Science, and Nonlinear Dynamics.
+description: >- # kept on one line: this string is reused as the <meta name="description">
+  PhD Research Scholar at IISER Thiruvananthapuram. Research in Complex Systems, Network Science, and Nonlinear Dynamics — adaptive networks, swarmalators, and collective behaviour.
 footer_text: # set to empty to remove footer text
 keywords: Complex Systems, Nonlinear Dynamics, Network Science, Adaptive Networks, Swarmalators, Academic Website
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
@@ -95,9 +96,13 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org structured data (JSON-LD) in the HTML head
+og_image: https://akash-phy.github.io/assets/img/og-preview.png # absolute URL — required by Open Graph
+# Used by the JSON-LD Person/ProfilePage block on the home page.
+schema_org:
+  job_title: PhD Research Scholar
+  affiliation: Indian Institute of Science Education and Research (IISER) Thiruvananthapuram
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification

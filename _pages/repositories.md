@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: Repositories
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
+description: Open-source code and GitHub repositories from Akash Yadav's research on adaptive networks, swarmalators, and nonlinear dynamics simulations.
 nav: false
 ---
 

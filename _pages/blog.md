@@ -2,6 +2,7 @@
 layout: page
 title: Blog
 permalink: /blog/
+description: Notes and commentary by Akash Yadav on complex systems research, network science, nonlinear dynamics, and academic life.
 nav: true
 nav_order: 4
 ---

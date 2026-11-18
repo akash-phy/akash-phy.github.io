@@ -1,0 +1,232 @@
+{% comment %}
+  SEO metadata: title, description, canonical, Open Graph, Twitter card, JSON-LD.
+  Local override of al_folio_core/_includes/metadata.liquid (see .al-folio-overrides.yml).
+  Differences from upstream:
+    - home <title> can carry a topical tagline (site.title_tagline)
+    - Open Graph / Twitter / schema images are absolutised (OG requires absolute URLs)
+    - article metadata (published/modified time, author) on blog posts
+    - JSON-LD: ProfilePage+Person on the home page, BlogPosting on posts, WebPage elsewhere
+    - fixed the `else if` typo that emptied descriptions
+    - verification tags emitted whenever the ID is configured
+{% endcomment %}
+
+{%- capture author_name -%}{{ site.first_name }}{% if site.middle_name != '' and site.middle_name != blank %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{%- endcapture -%}
+
+{%- capture site_title -%}{% if site.title == 'blank' %}{{ author_name }}{% else %}{{ site.title }}{% endif %}{%- endcapture -%}
+
+{%- assign page_description = page.description | default: site.description | strip_html | normalize_whitespace | strip -%}
+{%- if page_description == blank -%}
+  {%- assign page_description = site.description | strip_html | normalize_whitespace | strip -%}
+{%- endif -%}
+
+{%- comment -%} jekyll-archives-v2 exposes `type` (year/tag/category) on archive pages {%- endcomment -%}
+{%- assign archive_kind = page.type | default: '' -%}
+{%- if archive_kind != '' -%}
+  {%- case archive_kind -%}
+    {%- when 'year' -%}{%- capture archive_label -%}Posts from {{ page.date | date: '%Y' }}{%- endcapture -%}
+    {%- when 'tag', 'tags' -%}{%- capture archive_label -%}Posts tagged {{ page.title }}{%- endcapture -%}
+    {%- when 'category', 'categories' -%}{%- capture archive_label -%}Posts in category {{ page.title }}{%- endcapture -%}
+    {%- else -%}{%- assign archive_label = page.title -%}
+  {%- endcase -%}
+  {%- if page.description == blank or page.description == nil -%}
+    {%- capture page_description -%}{{ archive_label }} — writing by {{ site.first_name }} {{ site.last_name }}{% if site.blog_description %} on {{ site.blog_description }}{% endif %}.{%- endcapture -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- assign is_blog_post = false -%}
+{%- if page.url != '/blog/index.html' and page.url contains '/blog/' -%}
+  {%- unless page.url contains '/tag/' or page.url contains '/category/' -%}
+    {%- assign is_blog_post = true -%}
+  {%- endunless -%}
+{%- endif -%}
+
+{%- if page.url == '/' -%}
+  {%- if site.title_tagline -%}
+    {%- capture full_title -%}{{ site_title }} — {{ site.title_tagline }}{%- endcapture -%}
+  {%- else -%}
+    {%- assign full_title = site_title -%}
+  {%- endif -%}
+{%- elsif archive_kind != '' -%}
+  {%- capture full_title -%}{{ archive_label }} | {{ site_title }}{%- endcapture -%}
+{%- elsif page.title and page.title != 'blank' -%}
+  {%- capture full_title -%}{{ page.title }} | {{ site_title }}{%- endcapture -%}
+{%- else -%}
+  {%- assign full_title = site_title -%}
+{%- endif -%}
+
+{%- assign canonical_url = page.url | replace: 'index.html', '' | absolute_url -%}
+
+{%- assign og_image = page.og_image | default: site.og_image -%}
+{%- if og_image and og_image != blank -%}
+  {%- unless og_image contains '://' -%}
+    {%- assign og_image = og_image | absolute_url -%}
+  {%- endunless -%}
+{%- endif -%}
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ full_title | strip }}</title>
+<meta name="author" content="{{ author_name }}">
+<meta name="description" content="{{ page_description | truncate: 200 }}">
+{%- if page.keywords or site.keywords %}
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+{%- endif %}
+<meta name="robots" content="{% if page.redirect %}noindex, follow{% else %}index, follow, max-image-preview:large{% endif %}">
+<link rel="alternate" type="application/rss+xml" title="{{ site_title }} — Blog" href="{{ '/feed.xml' | absolute_url }}">
+<meta name="theme-color" content="#0f172a">
+
+{%- if site.google_site_verification and site.google_site_verification != blank %}
+<meta name="google-site-verification" content="{{ site.google_site_verification }}">
+{%- endif %}
+{%- if site.bing_site_verification and site.bing_site_verification != blank %}
+<meta name="msvalidate.01" content="{{ site.bing_site_verification }}">
+{%- endif %}
+
+{% if site.serve_og_meta %}
+<!-- OpenGraph -->
+<meta property="og:site_name" content="{{ site_title }}">
+<meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ full_title | strip }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:description" content="{{ page_description | truncate: 200 }}">
+<meta property="og:locale" content="{{ site.lang | default: 'en' }}">
+{%- if og_image %}
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site_title }} — {{ site.title_tagline | default: site.description | strip_html | truncate: 80 }}">
+{%- endif %}
+{%- if is_blog_post %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta property="article:author" content="{{ author_name }}">
+  {%- if page.tags.size > 0 %}
+    {%- for tag in page.tags %}
+<meta property="article:tag" content="{{ tag }}">
+    {%- endfor %}
+  {%- endif %}
+{%- endif %}
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="{% if og_image %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:title" content="{{ full_title | strip }}">
+<meta name="twitter:description" content="{{ page_description | truncate: 200 }}">
+{%- if og_image %}
+<meta name="twitter:image" content="{{ og_image }}">
+{%- endif %}
+{%- if site.x_username %}
+<meta name="twitter:site" content="@{{ site.x_username }}">
+<meta name="twitter:creator" content="@{{ site.x_username }}">
+{%- endif %}
+{% endif %}
+
+{% if site.serve_schema_org %}
+<!-- Schema.org / JSON-LD -->
+{%- assign sameaslinks = '' | split: ',' -%}
+{%- for social in site.data.socials -%}
+  {%- case social[0] -%}
+    {%- when 'acm_id' -%}{%- capture link %}https://dl.acm.org/profile/{{ social[1] }}/{% endcapture -%}
+    {%- when 'arxiv_id' -%}{%- capture link %}https://arxiv.org/a/{{ social[1] }}.html{% endcapture -%}
+    {%- when 'blogger_url' -%}{%- capture link %}{{ social[1] }}{% endcapture -%}
+    {%- when 'bluesky_url' -%}{%- capture link %}{{ social[1] }}{% endcapture -%}
+    {%- when 'dblp_url' -%}{%- capture link %}{{ social[1] }}{% endcapture -%}
+    {%- when 'facebook_id' -%}{%- capture link %}https://facebook.com/{{ social[1] }}{% endcapture -%}
+    {%- when 'github_username' -%}{%- capture link %}https://github.com/{{ social[1] }}{% endcapture -%}
+    {%- when 'gitlab_username' -%}{%- capture link %}https://gitlab.com/{{ social[1] }}{% endcapture -%}
+    {%- when 'hal_id' -%}{%- capture link %}https://cv.hal.science/{{ social[1] }}/{% endcapture -%}
+    {%- when 'ieee_id' -%}{%- capture link %}https://ieeexplore.ieee.org/author/{{ social[1] }}/{% endcapture -%}
+    {%- when 'inspirehep_id' -%}{%- capture link %}https://inspirehep.net/authors/{{ social[1] }}{% endcapture -%}
+    {%- when 'instagram_id' -%}{%- capture link %}https://instagram.com/{{ social[1] }}{% endcapture -%}
+    {%- when 'LinkedIn' -%}{%- capture link %}{{ social[1] }}{% endcapture -%}
+    {%- when 'linkedin_username' -%}{%- capture link %}https://www.linkedin.com/in/{{ social[1] }}{% endcapture -%}
+    {%- when 'mastodon_username' -%}{%- capture link %}https://{{ social[1] }}{% endcapture -%}
+    {%- when 'medium_username' -%}{%- capture link %}https://medium.com/@{{ social[1] }}{% endcapture -%}
+    {%- when 'orcid_id' -%}{%- capture link %}https://orcid.org/{{ social[1] }}{% endcapture -%}
+    {%- when 'osf_id' -%}{%- capture link %}https://osf.io/{{ social[1] }}/{% endcapture -%}
+    {%- when 'research_gate_profile' -%}{%- capture link %}https://www.researchgate.net/profile/{{ social[1] }}/{% endcapture -%}
+    {%- when 'scholar_userid' -%}{%- capture link %}https://scholar.google.com/citations?user={{ social[1] }}{% endcapture -%}
+    {%- when 'scopus_id' -%}{%- capture link %}https://www.scopus.com/authid/detail.uri?authorId={{ social[1] }}{% endcapture -%}
+    {%- when 'semanticscholar_id' -%}{%- capture link %}https://www.semanticscholar.org/author/{{ social[1] }}{% endcapture -%}
+    {%- when 'stackoverflow_id' -%}{%- capture link %}https://stackoverflow.com/users/{{ social[1] }}{% endcapture -%}
+    {%- when 'telegram_username' -%}{%- capture link %}https://telegram.me/{{ social[1] }}{% endcapture -%}
+    {%- when 'wikidata_id' -%}{%- capture link %}https://www.wikidata.org/wiki/{{ social[1] }}{% endcapture -%}
+    {%- when 'work_url' -%}{%- capture link %}{{ social[1] }}{% endcapture -%}
+    {%- when 'x_username' -%}{%- capture link %}https://twitter.com/{{ social[1] }}{% endcapture -%}
+    {%- when 'youtube_id' -%}{%- capture link %}https://youtube.com/@{{ social[1] }}{% endcapture -%}
+    {%- when 'zotero_username' -%}{%- capture link %}https://www.zotero.org/{{ social[1] }}{% endcapture -%}
+    {%- else -%}
+      {%- if social[1].url -%}{%- capture link %}{{ social[1].url }}{% endcapture -%}{%- endif -%}
+  {%- endcase -%}
+  {%- if link and link != blank -%}
+    {%- assign sameaslinks = sameaslinks | push: link -%}
+  {%- endif -%}
+  {%- assign link = '' -%}
+{%- endfor -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  {% if page.url == '/' %}
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": {{ author_name | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "image": {{ og_image | default: site.url | jsonify }},
+    "description": {{ page_description | jsonify }},
+    "jobTitle": {{ site.schema_org.job_title | default: 'Researcher' | jsonify }},
+    "affiliation": {
+      "@type": "Organization",
+      "name": {{ site.schema_org.affiliation | default: site.title | jsonify }}
+    }
+    {%- if sameaslinks != blank %},
+    "sameAs": {{ sameaslinks | jsonify }}
+    {%- endif %}
+    {%- if site.keywords %},
+    "knowsAbout": {{ site.keywords | split: ', ' | jsonify }}
+    {%- endif %}
+  }
+  {% elsif is_blog_post %}
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page_description | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical_url | jsonify }} },
+  "author": {
+    "@type": "Person",
+    "name": {{ author_name | jsonify }},
+    "url": {{ site.url | jsonify }}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ author_name | jsonify }},
+    "url": {{ site.url | jsonify }}
+  }
+  {%- if og_image %},
+  "image": {{ og_image | jsonify }}
+  {%- endif %}
+  {%- if page.tags.size > 0 %},
+  "keywords": {{ page.tags | join: ', ' | jsonify }}
+  {%- endif %}
+  {% else %}
+  "@type": "WebPage",
+  "name": {{ full_title | strip | jsonify }},
+  "description": {{ page_description | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ site_title | jsonify }},
+    "url": {{ site.url | jsonify }}
+  },
+  "author": {
+    "@type": "Person",
+    "name": {{ author_name | jsonify }},
+    "url": {{ site.url | jsonify }}
+  }
+  {% endif %}
+}
+</script>
+{% endif %}

@@ -2,7 +2,7 @@
 layout: course
 title: Classical Mechanics
 date: 2024-08-01
-description: Teaching Assistant for Classical Mechanics at IISER Thiruvananthapuram
+description: Teaching Assistant for Classical Mechanics at IISER Thiruvananthapuram, Aug – Dec 2024 — tutorials, problem sets, and exam support for the core physics course.
 institution: IISER Thiruvananthapuram
 year: 2024
 term: Aug – Dec

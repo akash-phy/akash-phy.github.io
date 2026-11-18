@@ -20,3 +20,7 @@ vendor/
 node_modules/
 .jekyll-cache/
 _archive/
+.worktrees/
+
+# local inbox for images to install
+_incoming/

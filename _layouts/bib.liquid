@@ -37,7 +37,7 @@
             width="100%"
             height="auto"
             data-zoomable
-            alt="{{ entry.preview }}"
+            alt="{% if entry.title %}Figure from the paper: {{ entry.title | strip_html | escape }}{% else %}{{ entry.preview | escape }}{% endif %}"
             onerror="this.style.display='none';"
           >
         {% endif %}

@@ -6,7 +6,7 @@ nav: true
 nav_order: 6
 cv_pdf: /assets/pdf/Akash_CV.pdf # you can also use external links here
 cv_format: rendercv # options: rendercv, jsonresume
-description: 
+description: Curriculum vitae of Akash Yadav — PhD Research Scholar in complex systems and nonlinear dynamics at IISER Thiruvananthapuram.
 toc:
   sidebar: left
 ---

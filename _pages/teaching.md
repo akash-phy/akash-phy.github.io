@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: Course materials, schedules, and resources for classes taught.
+description: Courses taught and teaching materials by Akash Yadav, covering complex systems, network science, and nonlinear dynamics.
 nav: true
 nav_order: 3
 calendar: true

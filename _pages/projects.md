@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Collection of previous/ongoing projects.
+description: Research projects by Akash Yadav on adaptive networks, swarmalators, and space plasma dynamics, with code and results.
 nav: false
 nav_order: 2
 display_categories: [Research]
